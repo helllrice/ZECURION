@@ -1,0 +1,83 @@
+@import (reference) '../../less/variables.less';
+
+
+.wrapper {
+    &__container {
+        display: flex;
+        height: 100vh;
+        .wrapper__sidebar {
+            min-width: 450px;
+            background-color: #F9F8F6;
+            height: max-content;
+            label {
+                position: relative;
+                input {
+                    width: 100%;
+                    padding-left: 50px;
+                    background-color: #F9F8F6;
+                    border: none;
+                }
+            }
+            
+            .search {
+                position: absolute;
+                top: 3px;
+                left: 25px;
+                width: 12px;
+                height: 12px;
+            }
+            
+            .wrapper__user {
+                padding: 20px 30px;
+                display: flex;
+                background-color: #E7E6E1;
+                
+            }
+            .wrapper__user:nth-child(3) {
+                position: relative;
+                background-color: #fff;
+                .users__number {
+                    p {
+                        color: #EE144E;
+                    }
+                }
+                .eye {
+                    position: absolute;
+                    top: 25px;
+                    left: 250px;
+                    width: 13px;
+                    height: 13px;
+                }
+            }
+        }
+        
+                
+        .wrapper__content {
+            width: 100%;
+            flex-direction: column;
+            border-left: 1px solid #c6c6c6;
+        }
+        
+        .info {
+            height: max-content;
+            display: flex;
+            flex-direction: row;
+            padding: 12px 21px;
+            border-bottom: 1px solid #c6c6c6;
+            
+            @media screen and (max-width: 1460px)  {
+                flex-direction: column;
+            }
+        }
+    }
+    
+    
+    
+    
+}
+
+@media (max-width: @bp-lg) { 
+    .wrapper__sidebar {
+        display: none;
+    }
+}
